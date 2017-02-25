@@ -97,27 +97,38 @@ export default {
     },
     // 适用于action的情况
     change () {
-      if (!this.handleClick && this.autoUpload && !!this.uploadUrl) {
-        let formData = new window.FormData()
-        formData.append('img', this.$refs.input.files[0])
+      if (this.handleUpload) {
+        return
+      }
+
+      let formData = new window.FormData()
+      formData.append('img', this.$refs.input.files[0])
+
+      if (this.autoUpload) {
+        if (!this.uploadUrl) {
+          console.error('uploadUrl不应为空')
+        }
+
         if (this.$vux && this.$vux.loading) {
           this.$vux.loading.show('正在上传')
         }
-        axios.post(this.uploadUrl, qs.stringify(formData))
-        .then((data) => {
+
+        axios.post(this.uploadUrl, formData)
+        .then((response) => {
           if (this.$vux && this.$vux.loading) {
             this.$vux.loading.hide()
           }
-          this.images.push(data.data)
+          this.images.push(response.data.data)
         })
+      } else {
+        this.$emit('upload-image', formData)
       }
     }
   }
 }
 </script>
 <style scoped lang="less">
-@import '~vux/src/styles/weui/widget/weui_cell/weui_access';
-@import '~vux/src/styles/weui/widget/weui_cell/weui_uploader';
+@import '~vux/src/styles/weui/widget/weui-uploader/index.less';
 .remove:before {
   width: 0;
   height: 0;

@@ -1,2 +1,1 @@
-import Uploader from './components/uploader.vue'
-export default Uploader
+module.exports = require('./components/uploader.vue')

@@ -20,7 +20,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-@import '~vux/src/styles/weui/widget/weui_cell/weui_access';
-@import '~vux/src/styles/weui/widget/weui_cell/weui_uploader';
-</style>
