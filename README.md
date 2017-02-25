@@ -81,7 +81,7 @@ export default {
   * `含义`: 是否显示头部
   * `备注`: 控制整个头部的显示
 
-* title | String | 图片上传 | 头部的标题 | 
+* title
   * `类型`: String 
   * `默认值`: 图片上传
   * `含义`: 头部的标题
@@ -112,7 +112,6 @@ export default {
   * `备注`: handleClick为`true`时，无法进行图片选择，故此参数无效。此参数为`false`时，选择图片后,`$emit('upload-image', formData)', `formData`为图片内容
 
 * uploadUrl
-| String | '' | 上传url | 使用内部上传方法时，必须传入。返回格式见下面说明
   * `类型`: String
   * `默认值`: ''
   * `含义`: 接收上传图片的url
@@ -169,3 +168,9 @@ export default {
 + [weui](https://github.com/weui/weui)
 + [axios](https://github.com/mzabriskie/axios)
 + [webpack-simple template](https://github.com/vuejs-templates/webpack-simple)
+
+## 疑问与讨论
+
++ 请先到[issue](https://github.com/greedying/vux-uploader/issues)进行搜索
++ 如果上面没有答案，欢迎提[issue](https://github.com/greedying/vux-uploader/issues/new)
++ 欢迎加qq群交流，[点此加入](//shang.qq.com/wpa/qunwpa?idkey=b23dade3b260202233283989212dca63bcbb3af8621e850e021cdcb9726d95e2")
