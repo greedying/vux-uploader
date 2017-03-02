@@ -1,6 +1,6 @@
 {
   "name": "vux-uploader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./src/main.js",
   "description": "vux-uploader Project, the component to upload images",
   "author": "greedying <greedying@163.com>",
