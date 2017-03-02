@@ -14,7 +14,7 @@
           </div>
 
           <ul class="weui-uploader__files">
-            <uploader-item v-for="image in images" :background-image="image.url" @click.native="preview(image)"></uploader-item>
+            <uploader-item v-for="image in images" :background-image="image.url" :key="image.url" @click.native="preview(image)"></uploader-item>
           </ul>
           
           <div v-show="!readonly && images.length < max" class="weui-uploader__input-box" @click="add">
