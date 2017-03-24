@@ -18,7 +18,7 @@
           </ul>
           
           <div v-show="!readonly && images.length < max" class="weui-uploader__input-box" @click="add">
-            <input v-if="!handleClick" ref="input" class="weui-uploader__input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple="false" @change="change">
+            <input v-if="!handleClick" ref="input" class="weui-uploader__input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple="false" :capture="showCapture" @change="change">
           </div>
         </div>
       </div>
@@ -72,6 +72,10 @@ export default {
     size: {
       type: String,
       default: 'normal'
+    },
+    capture: {
+      type: String,
+      default: ''
     }
   },
   components: {
@@ -123,6 +127,11 @@ export default {
       } else {
         this.$emit('upload-image', formData)
       }
+    }
+  },
+  computed: {
+    showCapture () {
+      return this.capture || undefined
     }
   }
 }

@@ -132,6 +132,12 @@ export default {
   * `含义`: 尺寸类型
   * `备注`: `normal`为`weui`默认尺寸，`small`为作者定义的小一些的尺寸
 
+* capture
+  * `类型`: String
+  * `默认值`: ''
+  * `含义`: input 的capture属性
+  * `备注`: 可以设置为`camera`，此时点击新增按钮，部分机型会直接调起相机，注意，各型号手机表现不同，请谨慎使用。`handleClick`为true时，此属性无效
+
 ### emit事件说明
 
 * add-image
