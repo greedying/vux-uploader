@@ -120,6 +120,7 @@ export default {
         axios.post(this.uploadUrl, formData)
         .then((response) => {
           if (this.$vux && this.$vux.loading) {
+            this.$refs.input.value = ''
             this.$vux.loading.hide()
           }
           this.images.push(response.data.data)
