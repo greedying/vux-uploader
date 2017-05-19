@@ -101,7 +101,7 @@ export default {
     },
     // 适用于action的情况
     change () {
-      if (this.handleUpload) {
+      if (this.handleClick) {
         return
       }
 
