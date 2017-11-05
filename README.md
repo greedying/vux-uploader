@@ -54,6 +54,7 @@ export default {
     :show-header="false"
     :readonly="true"
     :upload-url="uploadUrl"
+    :params="params"
     size="small"
     @preview="previewMethod"
     @add-image="addImageMethod"
@@ -126,6 +127,12 @@ export default {
     }
   }
 ```
+* params
+  * `类型`: Object
+  * `默认值`: null
+  * `含义`: 上传文件时携带参数
+  * `备注`: 无
+
 * size
   * `类型`: String
   * `默认值`: normal

@@ -76,6 +76,10 @@ export default {
     capture: {
       type: String,
       default: ''
+    },
+    params: {
+      type: Object,
+      default: null
     }
   },
   components: {
@@ -107,6 +111,11 @@ export default {
 
       let formData = new window.FormData()
       formData.append('img', this.$refs.input.files[0])
+      if (this.params) {
+        for( let key in this.params) {
+          formData.append(key, this.params[key])
+        }
+      }
 
       if (this.autoUpload) {
         if (!this.uploadUrl) {
