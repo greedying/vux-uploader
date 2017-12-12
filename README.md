@@ -175,6 +175,7 @@ export default {
 - [ ] 一次选择，多图片上传
 - [ ] 其他未实现事项
 - [ ] formData 中 'img' 可以配置
+- [x] 上传图片时，附带post参数[+16](https://github.com/greedying/vux-uploader/pull/16)
 
 ## 感谢与参考
 
