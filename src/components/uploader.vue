@@ -18,7 +18,7 @@
           </ul>
           
           <div v-show="!readonly && images.length < max" class="weui-uploader__input-box" @click="add">
-            <input v-if="!handleClick" ref="input" class="weui-uploader__input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" :capture="showCapture" @change="change">
+            <input v-if="!handleClick" ref="input" class="weui-uploader__input" type="file" accept="image/*" :capture="showCapture" @change="change">
           </div>
         </div>
       </div>
