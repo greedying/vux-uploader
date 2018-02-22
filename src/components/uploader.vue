@@ -77,6 +77,10 @@ export default {
       type: String,
       default: ''
     },
+    name: {
+      type: String,
+      default: 'img'
+    },
     params: {
       type: Object,
       default: null
@@ -110,7 +114,7 @@ export default {
       }
 
       let formData = new window.FormData()
-      formData.append('img', this.$refs.input.files[0])
+      formData.append(this.name, this.$refs.input.files[0])
       if (this.params) {
         for( let key in this.params) {
           formData.append(key, this.params[key])

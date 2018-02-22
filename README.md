@@ -54,6 +54,7 @@ export default {
     :show-header="false"
     :readonly="true"
     :upload-url="uploadUrl"
+    name="img"
     :params="params"
     size="small"
     @preview="previewMethod"
@@ -127,6 +128,12 @@ export default {
     }
   }
 ```
+* name
+  * `类型`: String
+  * `默认值`: `img`
+  * `含义`: 默认上传的时候，图片使用的表单name
+  * `备注`:  无
+
 * params
   * `类型`: Object
   * `默认值`: null
