@@ -101,6 +101,8 @@ export default {
     },
     // 移除第一张图
     remove () {
+      // 移除图片的时候将input file 置空，否则删除该图片之后无法再次上传该图片
+      document.querySelector('.weui-uploader__input').value = ''
       if (this.handleClick) {
         this.$emit('remove-image')
       } else {
