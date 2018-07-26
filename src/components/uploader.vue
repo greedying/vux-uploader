@@ -84,7 +84,11 @@ export default {
     params: {
       type: Object,
       default: null
-    }
+    },
+	headers: {
+	  type: Object,
+      default: {}
+	}
   },
   components: {
     UploaderItem
@@ -130,7 +134,7 @@ export default {
           this.$vux.loading.show('正在上传')
         }
 
-        axios.post(this.uploadUrl, formData)
+        axios.post(this.uploadUrl, formData,{headers: this.headers})
         .then((response) => {
           if (this.$vux && this.$vux.loading) {
             this.$vux.loading.hide()
